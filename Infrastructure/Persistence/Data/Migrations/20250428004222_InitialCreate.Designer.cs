@@ -11,7 +11,7 @@ using Persistence.Data;
 namespace Persistence.Data.Migrations
 {
     [DbContext(typeof(StoreDbContext))]
-    [Migration("20250427000035_InitialCreate")]
+    [Migration("20250428004222_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -48,7 +48,7 @@ namespace Persistence.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("dicimal(10,2)");
+                        .HasColumnType("decimal(10,2)");
 
                     b.Property<int>("TypeId")
                         .HasColumnType("int");

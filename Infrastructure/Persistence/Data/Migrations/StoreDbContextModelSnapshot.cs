@@ -45,7 +45,7 @@ namespace Persistence.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("dicimal(10,2)");
+                        .HasColumnType("decimal(10,2)");
 
                     b.Property<int>("TypeId")
                         .HasColumnType("int");

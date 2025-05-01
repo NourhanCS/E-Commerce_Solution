@@ -6,6 +6,8 @@ using Persistence;
 using Persistence.Data;
 using Persistence.Repositories;
 using Service.MappingProfiles;
+using ServiceAbstraction;
+using Services;
 using System.Threading.Tasks;
 
 namespace E_Commerce.Web
@@ -31,6 +33,7 @@ namespace E_Commerce.Web
             builder.Services.AddScoped<IDataSeeding,DataSeeding>();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddAutoMapper(typeof(Services.AssemplyReference).Assembly);
+            builder.Services.AddScoped<IServiceManager, ServiceManager>();
             #endregion
 
            var app = builder.Build();

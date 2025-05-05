@@ -1,16 +1,12 @@
-
 using DomainLayer;
 using DomainLayer.Contracts;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
 using Persistence.Data;
 using Persistence.Repositories;
-using Service.MappingProfiles;
-using ServiceAbstraction;
-using Services;
+using Services.MappingProfiles;
 using System.Threading.Tasks;
 
-namespace E_Commerce.Web
 {
     public class Program
     {

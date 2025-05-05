@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using DomainLayer;
-using Service;
+using Services;
 using ServiceAbstraction;
 using System;
 using System.Collections.Generic;
@@ -13,6 +13,6 @@ namespace Services
     public class ServiceManager(IUnitOfWork unitOfWork , IMapper mapper) : IServiceManager
     {
         private readonly Lazy<IProductService> _LazyProductService = new Lazy<IProductService>(() => new ProductService(unitOfWork,mapper));
-        public IProductService productServic => _LazyProductService.Value;
+        public IProductService ProductService => _LazyProductService.Value;
     }
 }

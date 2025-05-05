@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service.MappingProfiles
+namespace Services.MappingProfiles
 {
      public class ProductProfile : Profile
     {

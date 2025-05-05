@@ -5,8 +5,12 @@ using Persistence;
 using Persistence.Data;
 using Persistence.Repositories;
 using Services.MappingProfiles;
+using ServiceAbstraction;
+using Services;
 using System.Threading.Tasks;
 
+namespace E_Commerce.Web
+    
 {
     public class Program
     {
@@ -26,7 +30,7 @@ using System.Threading.Tasks;
 
             });
 
-            builder.Services.AddScoped<IDataSeeding,DataSeeding>();
+            builder.Services.AddScoped<IDataSeeding, DataSeeding>();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddAutoMapper(typeof(Services.AssemplyReference).Assembly);
             builder.Services.AddScoped<IServiceManager, ServiceManager>();
@@ -43,12 +47,6 @@ using System.Threading.Tasks;
 
             #endregion
 
-
-
-
-
-
-
             #region Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
@@ -62,6 +60,29 @@ using System.Threading.Tasks;
             #endregion
 
             app.Run();
+
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
